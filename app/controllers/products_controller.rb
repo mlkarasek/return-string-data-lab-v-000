@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
        @product.save
        redirect_to products_path
    end
- end 
 
     def new
        @product = Product.new
@@ -29,3 +28,4 @@ class ProductsController < ApplicationController
        params.require(:product).permit(:name, :price, :description, :inventory)
    end
 end
+end 
