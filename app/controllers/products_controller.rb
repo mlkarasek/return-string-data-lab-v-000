@@ -23,9 +23,10 @@ class ProductsController < ApplicationController
        product = Product.find(params[:id])
        render plain: product.inventory > 0 ? true : false
    end
+   
     private
+
     def post_params
        params.require(:product).permit(:name, :price, :description, :inventory)
    end
 end
-end 
