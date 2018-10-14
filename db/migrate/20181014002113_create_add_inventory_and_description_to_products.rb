@@ -1,8 +1,6 @@
-class CreateAddInventoryAndDescriptionToProducts < ActiveRecord::Migration
+class AddInventoryAndDescriptionToProducts < ActiveRecord::Migration
   def change
-    create_table :add_inventory_and_description_to_products do |t|
-
-      t.timestamps null: false
-    end
+    add_column :products, :description, :string
+    add_column :products, :inventory, :integer
   end
 end
